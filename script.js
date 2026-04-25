@@ -56,5 +56,47 @@ if (contactForm && feedback) {
   });
 }
 
+const appointmentForm = document.getElementById('appointmentForm');
+const appointmentFeedback = document.getElementById('appointmentFeedback');
+
+if (appointmentForm && appointmentFeedback) {
+  appointmentForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    appointmentFeedback.className = 'form-feedback';
+
+    const studentName = document.getElementById('studentName').value.trim();
+    const studentEmail = document.getElementById('studentEmail').value.trim();
+    const preferredDate = document.getElementById('preferredDate').value;
+    const preferredTime = document.getElementById('preferredTime').value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!studentName || !studentEmail || !preferredDate || !preferredTime) {
+      appointmentFeedback.textContent = 'Please complete all required appointment fields.';
+      appointmentFeedback.classList.add('error');
+      return;
+    }
+
+    if (!emailRegex.test(studentEmail)) {
+      appointmentFeedback.textContent = 'Please enter a valid school email.';
+      appointmentFeedback.classList.add('error');
+      return;
+    }
+
+    const selectedDate = new Date(`${preferredDate}T00:00:00`);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    if (selectedDate < today) {
+      appointmentFeedback.textContent = 'Please choose a date from today or later.';
+      appointmentFeedback.classList.add('error');
+      return;
+    }
+
+    appointmentFeedback.textContent =
+      'Appointment request sent successfully. The psychologist team will follow up with a confirmation.';
+    appointmentFeedback.classList.add('success');
+    appointmentForm.reset();
+  });
+}
+
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
