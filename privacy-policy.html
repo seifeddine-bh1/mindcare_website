@@ -2,163 +2,63 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mindcare Privacy Policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MindCare Privacy Policy</title>
+    <meta name="description" content="Read the MindCare privacy policy and data handling commitments for schools and students." />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a href="index.html" class="brand">mindcare</a>
-        <nav class="nav" aria-label="Legal navigation" style="display:flex;position:static;flex-direction:row;">
+        <a href="index.html" class="brand" aria-label="MindCare Home"><img src="assets/mindcare-logo.svg" class="brand-logo" alt="" aria-hidden="true" /><span>MindCare</span></a>
+        <button class="nav-toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="primaryNav" class="nav" aria-label="Primary">
           <a href="index.html">Home</a>
-          <a href="terms.html">Terms</a>
+          <a href="features.html">Features</a>
+          <a href="about.html">About</a>
+          <a href="privacy-policy.html" aria-current="page">Privacy Policy</a>
+          <a href="contact.html">Contact</a>
         </nav>
       </div>
     </header>
 
-    <main class="section">
-      <div class="container card">
-        <p class="eyebrow">Legal</p>
-        <h1>Privacy Policy</h1>
-        <p><strong>Last updated:</strong> April 24, 2026</p>
+    <main id="main-content" class="section">
+      <div class="container legal-layout">
+        <aside class="toc" aria-label="Table of contents">
+          <h2>Contents</h2>
+          <ol>
+            <li><a href="#policy">Privacy Policy</a></li>
+          </ol>
+        </aside>
 
-        <h2>1) Who we are</h2>
-        <p>
-          This Privacy Policy describes how <strong>{{DEVELOPER_OR_SCHOOL_NAME}}</strong> (“we”, “us”, “our”) handles personal data
-          for the <strong>mindcare</strong> app (package: <code>com.anonymous.mindcare</code>) and this website.
-        </p>
-        <p>
-          Contact: <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a> (support) and
-          <a href="mailto:{{PRIVACY_EMAIL}}">{{PRIVACY_EMAIL}}</a> (privacy).
-        </p>
-
-        <h2>2) Scope</h2>
-        <p>
-          This policy applies to users of mindcare, including students and school psychologists in participating schools, and to
-          visitors of our public website and legal pages.
-        </p>
-
-        <h2>3) Data we collect</h2>
-        <h3>Account and profile data</h3>
-        <ul>
-          <li>Email address, password (processed through authentication provider), and profile fields (name, username, birth date).</li>
-          <li>School-scoped account information such as school code, role, school ID, and account status.</li>
-        </ul>
-
-        <h3>Communication and wellbeing data</h3>
-        <ul>
-          <li>Chat message content and metadata (participants, timestamps, delivery-related details).</li>
-          <li>Mood tracking entries and optional notes/tags.</li>
-          <li>Care task descriptions, support requests, and related communication records.</li>
-          <li>User-uploaded content such as feed posts, comments/likes interactions, avatars, and media files.</li>
-        </ul>
-
-        <h3>Technical and diagnostics data</h3>
-        <ul>
-          <li>Push notification token and limited device identifiers needed for notifications.</li>
-          <li>Diagnostics, crash logs, and usage information if enabled in production (placeholder for final configuration).</li>
-          <li>Security/session data necessary for authentication and account protection.</li>
-        </ul>
-
-        <h2>4) Why we collect data</h2>
-        <ul>
-          <li>To provide secure account access and school-scoped communication features.</li>
-          <li>To deliver core app modules: chats, requests/appointments, feed, profile, and wellbeing tools.</li>
-          <li>To send notifications, maintain service reliability, and provide user support.</li>
-          <li>To protect students, investigate misuse, and comply with legal obligations.</li>
-        </ul>
-
-        <h2>5) Legal bases and consent approach</h2>
-        <p>
-          Depending on jurisdiction, we rely on one or more of the following: consent, performance of a service requested by the
-          school/user, legitimate interests in running and securing the service, and legal obligations.
-        </p>
-        <p>
-          For minors, school and/or parent pathways may apply according to local law and school policy. We use plain-language notice
-          and age-appropriate safeguards where applicable.
-        </p>
-
-        <h2>6) Sharing of data</h2>
-        <p>We do not sell personal data. We may share data with:</p>
-        <ul>
-          <li><strong>Authorized school staff</strong> and psychologists for support workflows.</li>
-          <li><strong>Service providers</strong> that operate infrastructure and app functionality, such as:</li>
-          <li>Supabase (auth/database/storage/realtime) — placeholder for DPA and region confirmation.</li>
-          <li>Google/Firebase services (Android configuration and related Google services) — placeholder as applicable.</li>
-          <li>Expo services (runtime/build/notifications) — placeholder as applicable.</li>
-          <li><strong>Legal/public authorities</strong> when required by law, legal process, or to protect safety and rights.</li>
-        </ul>
-
-        <h2>7) Retention and deletion</h2>
-        <p>
-          We retain data only as long as needed for service delivery, student protection, legal compliance, and dispute resolution.
-          Suggested baseline retention settings (to be validated with counsel and school policy):
-        </p>
-        <ul>
-          <li>Account/profile data: while account is active and up to {{ACCOUNT_RETENTION_PERIOD}} after closure.</li>
-          <li>Messages/support records: up to {{MESSAGE_RETENTION_PERIOD}} unless longer retention is required by policy/law.</li>
-          <li>Diagnostics logs: typically {{DIAGNOSTICS_RETENTION_PERIOD}}.</li>
-        </ul>
-        <p>
-          <strong>Deletion workflow:</strong> users may request deletion via {{ACCOUNT_DELETION_CONTACT}}. Schools may also submit
-          deletion/correction requests for managed accounts. We will verify identity/authority and respond within applicable legal
-          timelines.
-        </p>
-
-        <h2>8) Your rights</h2>
-        <p>Depending on local law, users (or authorized parents/schools) may request:</p>
-        <ul>
-          <li>Access to personal data.</li>
-          <li>Correction of inaccurate data.</li>
-          <li>Deletion of account/data where applicable.</li>
-          <li>Restriction or objection to certain processing.</li>
-          <li>Information about how to file a complaint with a regulator.</li>
-        </ul>
-        <p>For rights requests, contact <a href="mailto:{{PRIVACY_EMAIL}}">{{PRIVACY_EMAIL}}</a>.</p>
-
-        <h2>9) Children and minors</h2>
-        <p>
-          mindcare is designed for school environments and may be used by minors under school governance. We apply child-safety and
-          privacy principles consistent with applicable obligations (including COPPA/Families context where relevant), and provide a
-          parent/school contact pathway for privacy inquiries and account actions.
-        </p>
-
-        <h2>10) Security safeguards</h2>
-        <ul>
-          <li>Role-aware access controls and school-scoped permissions.</li>
-          <li>Protected authentication/session handling.</li>
-          <li>Security rules and database access policies (e.g., row-level controls where configured).</li>
-          <li>Operational safeguards and incident response processes (placeholder to finalize).</li>
-        </ul>
-
-        <h2>11) International data transfers and storage region</h2>
-        <p>
-          Data may be processed in {{PRIMARY_STORAGE_REGION}} and other regions where service providers operate. If data is
-          transferred internationally, we apply safeguards required by applicable law.
-        </p>
-
-        <h2>12) Google Play disclosures</h2>
-        <p>
-          We maintain a public, non-geofenced privacy policy URL for Google Play, and provide policy links in Play Console and
-          in-app. Data handling descriptions are aligned with app functionality and updated when practices change.
-        </p>
-
-        <h2>13) Policy updates</h2>
-        <p>
-          We may update this policy from time to time. Material changes will be posted on this page with a revised “Last updated”
-          date and, where appropriate, in-app or email notice.
-        </p>
-
-        <h2>14) Contact us</h2>
-        <p>
-          Support: <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a><br />
-          Privacy: <a href="mailto:{{PRIVACY_EMAIL}}">{{PRIVACY_EMAIL}}</a><br />
-          Developer/School: {{DEVELOPER_OR_SCHOOL_NAME}}<br />
-          Privacy Policy URL: {{PRIVACY_URL}}<br />
-          Terms URL: {{TERMS_URL}}
-        </p>
+        <article class="legal-card" id="policy">
+          <p class="eyebrow">Legal</p>
+          <h1>Privacy Policy</h1>
+          <h2>Official Policy Text</h2>
+          <h3>Paste your legal document below</h3>
+          <p>[INSERT PRIVACY POLICY HERE — I will paste it manually]</p>
+        </article>
       </div>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p class="footer-title">MindCare</p>
+        <nav aria-label="Footer links">
+          <a href="index.html">Home</a>
+          <a href="features.html">Features</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="script.js" defer></script>
   </body>
 </html>
