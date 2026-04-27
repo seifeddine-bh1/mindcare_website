@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" role="img" aria-label="MindCare logo">
+  <defs>
+    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffe89a" />
+      <stop offset="100%" stop-color="#f6b10f" />
+    </linearGradient>
+    <linearGradient id="mist" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fffef8" />
+      <stop offset="100%" stop-color="#f6f2e5" />
+    </linearGradient>
+  </defs>
+
+  <circle cx="210" cy="170" r="130" fill="url(#sun)" />
+  <path d="M85 222c15-21 35-30 55-30 18 0 27 7 37 18 8-10 17-18 33-18 14 0 24 7 30 14 10-14 22-23 41-23 28 0 53 21 53 49H85z" fill="url(#mist)"/>
+  <path d="M143 223l28-23 21 16 31-29 17 18 24-16 34 34H143z" fill="#efbb35" opacity="0.9"/>
+  <path d="M80 228c63 0 258 0 290-2-48 12-90 9-117 12 44 5 63 4 80 10-32 8-66 4-87 9 30 4 45 5 59 11-28 5-54 3-69 9 25 4 38 5 49 11-26 4-48 3-61 7" fill="none" stroke="#f9d35e" stroke-width="6" stroke-linecap="round"/>
+
+  <path d="M78 204c0 0-2 19-19 30-16 10-16 17-8 23 9 6 7 10 2 16-6 7-3 11 3 15 6 4 8 7 3 14-5 9 2 16 12 16 15 0 23-2 42-1 40 2 64 28 90 69 2-45-13-81-55-98-34-14-70-51-70-84z" fill="url(#sun)"/>
+
+  <circle cx="181" cy="106" r="12" fill="#f4f1de" />
+  <circle cx="255" cy="131" r="11" fill="#f5c22f" />
+  <g fill="#fff7d7">
+    <circle cx="140" cy="100" r="2.5" />
+    <circle cx="117" cy="131" r="2" />
+    <circle cx="278" cy="88" r="2" />
+    <circle cx="300" cy="121" r="2" />
+    <circle cx="312" cy="160" r="2.4" />
+  </g>
+</svg>

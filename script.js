@@ -16,15 +16,6 @@ if (navToggle && nav) {
   });
 }
 
-document.querySelectorAll('.faq-question').forEach((button) => {
-  button.addEventListener('click', () => {
-    const item = button.closest('.faq-item');
-    const isOpen = item.classList.contains('active');
-    item.classList.toggle('active');
-    button.setAttribute('aria-expanded', String(!isOpen));
-  });
-});
-
 const contactForm = document.getElementById('contactForm');
 const feedback = document.getElementById('formFeedback');
 
@@ -35,11 +26,12 @@ if (contactForm && feedback) {
 
     const fullName = document.getElementById('fullName').value.trim();
     const email = document.getElementById('email').value.trim();
+    const schoolName = document.getElementById('schoolName').value.trim();
     const message = document.getElementById('message').value.trim();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!fullName || !email || !message) {
-      feedback.textContent = 'Please fill in all fields.';
+    if (!fullName || !email || !schoolName || !message) {
+      feedback.textContent = 'Please complete all fields before submitting.';
       feedback.classList.add('error');
       return;
     }
@@ -50,53 +42,27 @@ if (contactForm && feedback) {
       return;
     }
 
-    feedback.textContent = 'Thanks! This demo form is front-end only. Connect a backend before launch.';
+    feedback.textContent = 'Thanks! Your request was captured in this demo form. Connect your backend to enable delivery.';
     feedback.classList.add('success');
     contactForm.reset();
   });
 }
 
-const appointmentForm = document.getElementById('appointmentForm');
-const appointmentFeedback = document.getElementById('appointmentFeedback');
+const revealElements = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && revealElements.length > 0) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
 
-if (appointmentForm && appointmentFeedback) {
-  appointmentForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    appointmentFeedback.className = 'form-feedback';
-
-    const studentName = document.getElementById('studentName').value.trim();
-    const studentEmail = document.getElementById('studentEmail').value.trim();
-    const preferredDate = document.getElementById('preferredDate').value;
-    const preferredTime = document.getElementById('preferredTime').value;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!studentName || !studentEmail || !preferredDate || !preferredTime) {
-      appointmentFeedback.textContent = 'Please complete all required appointment fields.';
-      appointmentFeedback.classList.add('error');
-      return;
-    }
-
-    if (!emailRegex.test(studentEmail)) {
-      appointmentFeedback.textContent = 'Please enter a valid school email.';
-      appointmentFeedback.classList.add('error');
-      return;
-    }
-
-    const selectedDate = new Date(`${preferredDate}T00:00:00`);
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    if (selectedDate < today) {
-      appointmentFeedback.textContent = 'Please choose a date from today or later.';
-      appointmentFeedback.classList.add('error');
-      return;
-    }
-
-    appointmentFeedback.textContent =
-      'Appointment request sent successfully. The psychologist team will follow up with a confirmation.';
-    appointmentFeedback.classList.add('success');
-    appointmentForm.reset();
-  });
+  revealElements.forEach((element) => observer.observe(element));
+} else {
+  revealElements.forEach((element) => element.classList.add('is-visible'));
 }
-
-const yearEl = document.getElementById('year');
-if (yearEl) yearEl.textContent = String(new Date().getFullYear());

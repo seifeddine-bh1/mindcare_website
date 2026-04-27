@@ -2,38 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MindCare | Student Mental Well-being Platform for Schools</title>
     <meta
       name="description"
-      content="mindcare helps students and school psychologists communicate safely inside one school community."
+      content="MindCare helps students ages 13–18 connect with school psychologists through secure communication, mood tracking, and guided support activities."
     />
-    <title>mindcare | Student & School Psychologist Communication</title>
+    <meta name="theme-color" content="#0f766e" />
+    <meta property="og:title" content="MindCare | Mental Well-being for School Communities" />
+    <meta
+      property="og:description"
+      content="A privacy-focused student support app for schools with secure messaging, mood tracking, tasks, and psychologist-led guidance."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mindcare.app/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="site-header" id="top">
+    <header class="site-header">
       <div class="container nav-wrap">
-        <a href="index.html" class="brand" aria-label="mindcare home">mindcare</a>
-        <button
-          class="nav-toggle"
-          id="navToggle"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-          aria-controls="primaryNav"
-        >
+        <a href="index.html" class="brand" aria-label="MindCare Home">
+          <img src="assets/mindcare-logo.svg" class="brand-logo" alt="" aria-hidden="true" />
+          <span>MindCare</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
         <nav id="primaryNav" class="nav" aria-label="Primary">
-          <a href="#who-we-are">Who We Are</a>
-          <a href="#how-it-works">How It Works</a>
-          <a href="#features">Features</a>
-          <a href="#appointments">Appointments</a>
-          <a href="#privacy-safety">Privacy &amp; Safety</a>
-          <a href="#for-schools">For Schools</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="features.html">Features</a>
+          <a href="about.html">About</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="contact.html">Contact</a>
         </nav>
       </div>
     </header>
@@ -42,295 +52,75 @@
       <section class="hero section">
         <div class="container hero-grid">
           <div>
-            <p class="eyebrow">School wellbeing communication app</p>
-            <h1>mindcare keeps students and school psychologists connected with care.</h1>
+            <p class="eyebrow">Built for trusted school support</p>
+            <h1>Support student mental well-being with clarity, privacy, and confidence.</h1>
             <p class="lead">
-              A trusted, school-scoped space for secure chats, support requests, appointments, and wellbeing tools like mood
-              check-ins and breathing exercises.
+              MindCare helps schools create a safe digital space where students (13–18) can communicate with psychologists, track daily mood,
+              and access structured support activities.
             </p>
             <div class="cta-row">
-              <a class="btn btn-primary" href="{{PLAY_STORE_URL}}" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
-              <a class="btn btn-secondary" href="#contact">Contact us</a>
+              <a class="btn btn-primary" href="contact.html">Download App</a>
+              <a class="btn btn-secondary" href="features.html">Learn More</a>
             </div>
-            <ul class="trust-list" aria-label="Trust highlights">
-              <li>Private school-scoped communication</li>
-              <li>Account and profile-based access</li>
-              <li>Notification support for timely follow-up</li>
-            </ul>
+            <div class="hero-trust" role="list" aria-label="Trust highlights">
+              <p role="listitem">Designed for school environments</p>
+              <p role="listitem">Strong encryption and privacy-focused architecture</p>
+              <p role="listitem">Hosted on EU infrastructure (France)</p>
+            </div>
           </div>
-          <aside class="hero-card" aria-label="App details">
-            <h2>App snapshot</h2>
-            <p><strong>App name:</strong> mindcare</p>
-            <p><strong>Package ID:</strong> com.anonymous.mindcare</p>
-            <p><strong>Developer/School:</strong> {{DEVELOPER_OR_SCHOOL_NAME}}</p>
-            <p><strong>Version:</strong> {{APP_VERSION}}</p>
+          <aside class="glass-card" aria-label="Platform highlights">
+            <img src="assets/mindcare-logo.svg" class="hero-logo" alt="MindCare logo" loading="lazy" />
+            <h2>What schools get</h2>
+            <ul>
+              <li>Student-to-psychologist chat (anonymous or identified)</li>
+              <li>Mood tracking with tags and optional notes</li>
+              <li>Psychologist tasks and completion tracking</li>
+              <li>Guidance feed and well-being activities</li>
+            </ul>
           </aside>
         </div>
       </section>
 
-      <section id="who-we-are" class="section">
+      <section class="section">
         <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Who we are</p>
-            <h2>Built for school communities where trust matters.</h2>
+            <p class="eyebrow">How MindCare helps</p>
+            <h2>Practical support workflows for students and psychologists.</h2>
           </div>
           <div class="card-grid three">
-            <article class="card">
-              <h3>Our mission</h3>
-              <p>
-                mindcare helps students reach school psychologists early, safely, and respectfully. We aim to reduce friction in
-                asking for support.
-              </p>
+            <article class="feature-card reveal">
+              <h3>Early communication</h3>
+              <p>Students can reach out at the right moment, reducing barriers to asking for help.</p>
             </article>
-            <article class="card">
-              <h3>School-centered context</h3>
-              <p>
-                The app is designed for communication within the same school, supporting collaboration between students, staff, and
-                care teams.
-              </p>
+            <article class="feature-card reveal">
+              <h3>Actionable follow-up</h3>
+              <p>Psychologists assign tasks, monitor completion, and maintain continuity of support.</p>
             </article>
-            <article class="card">
-              <h3>Our values</h3>
-              <p>Privacy by design, compassionate language, practical support, and clear boundaries for student protection.</p>
+            <article class="feature-card reveal">
+              <h3>Structured well-being routines</h3>
+              <p>Mood check-ins and concentration activities encourage healthier daily habits.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="how-it-works" class="section soft-bg">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">How it works</p>
-            <h2>Simple steps for students and psychologists.</h2>
-          </div>
-          <div class="card-grid two">
-            <article class="card">
-              <h3>Student flow</h3>
-              <ol>
-                <li>Sign in with your school-linked account and profile.</li>
-                <li>Use Home dashboard tools (mood tracking, breathing, body scan, word game, care tasks).</li>
-                <li>Send a support message or appointment request via Chats.</li>
-                <li>Receive updates and reminders through notifications.</li>
-              </ol>
-            </article>
-            <article class="card">
-              <h3>Psychologist flow</h3>
-              <ol>
-                <li>Manage student communication in secure school-scoped channels.</li>
-                <li>Review requests and plan appropriate follow-up.</li>
-                <li>Share care tasks and monitor continuity.</li>
-                <li>Use notifications to respond quickly and maintain continuity of care.</li>
-              </ol>
-            </article>
-          </div>
-          <article class="card highlight">
-            <h3>Safety and moderation overview</h3>
+      <section class="section soft-bg">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Privacy-first design</p>
+            <h2>Built with strong encryption and responsible data practices.</h2>
             <p>
-              mindcare uses role-aware access patterns, account profiles, and protected communication flows designed for school
-              wellbeing contexts. Schools can define escalation and moderation workflows aligned with local policy.
+              MindCare uses public/private key cryptography for messages. Public keys are stored server-side, while private keys are
+              encrypted with a separate user-defined encryption password that is never stored on the server.
             </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="features" class="section">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">Features</p>
-            <h2>Core modules that support everyday wellbeing communication.</h2>
-          </div>
-          <div class="card-grid four">
-            <article class="card">
-              <h3>Secure messaging</h3>
-              <p>Private chat context between students and psychologists with account-level access controls.</p>
-            </article>
-            <article class="card">
-              <h3>Requests & appointments</h3>
-              <p>Students can ask for support and psychologists can triage, schedule, and follow up.</p>
-            </article>
-            <article class="card">
-              <h3>Notifications</h3>
-              <p>Timely reminders help ensure no request is missed and responses happen faster.</p>
-            </article>
-            <article class="card">
-              <h3>School-scoped communication</h3>
-              <p>Designed for interactions within one school environment to improve consistency and accountability.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="appointments" class="section">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">Student appointments</p>
-            <h2>Students can now request appointments directly.</h2>
-            <p class="lead">
-              This improved section gives students a clear path to request support time with a school psychologist.
+            <p>
+              This privacy-focused model helps protect communication and aligns with school trust requirements.
             </p>
           </div>
-          <div class="card-grid two">
-            <article class="card">
-              <h3>Request an appointment</h3>
-              <form id="appointmentForm" novalidate>
-                <label for="studentName">Student name</label>
-                <input id="studentName" name="studentName" type="text" required aria-required="true" />
-
-                <label for="studentEmail">School email</label>
-                <input id="studentEmail" name="studentEmail" type="email" required aria-required="true" />
-
-                <label for="preferredDate">Preferred date</label>
-                <input id="preferredDate" name="preferredDate" type="date" required aria-required="true" />
-
-                <label for="preferredTime">Preferred time</label>
-                <input id="preferredTime" name="preferredTime" type="time" required aria-required="true" />
-
-                <label for="reason">Reason (optional)</label>
-                <textarea id="reason" name="reason" rows="4" placeholder="Share a short reason so we can prepare the right support."></textarea>
-
-                <button type="submit" class="btn btn-primary">Request appointment</button>
-                <p id="appointmentFeedback" class="form-feedback" aria-live="polite"></p>
-              </form>
-            </article>
-            <article class="card">
-              <h3>What happens next</h3>
-              <ul>
-                <li>Your request is reviewed by the school psychologist team.</li>
-                <li>You receive a confirmation message with an approved time or alternatives.</li>
-                <li>Reminder notifications are sent before the appointment.</li>
-              </ul>
-              <p>
-                For urgent safety concerns, follow your school emergency process immediately. mindcare does not replace emergency
-                services.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="privacy-safety" class="section soft-bg">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">Privacy & safety</p>
-            <h2>Built with student protection principles.</h2>
-          </div>
-          <div class="card-grid two">
-            <article class="card">
-              <h3>Data handling summary</h3>
-              <p>
-                We process account details, chat content and metadata, media uploads, notification tokens, and optional diagnostic
-                data to deliver service, maintain safety, and provide support.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Student protection principles</h3>
-              <p>
-                We emphasize least-necessary data access, school-governed roles, secure storage, and clear deletion pathways for
-                students and schools.
-              </p>
-            </article>
-          </div>
-          <div class="legal-links">
-            <a class="btn btn-secondary" href="privacy-policy.html">Read Privacy Policy</a>
-            <a class="btn btn-secondary" href="terms.html">Read Terms of Use</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="for-schools" class="section">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">For schools & admin</p>
-            <h2>Support wellbeing programs with less friction.</h2>
-          </div>
-          <div class="card-grid two">
-            <article class="card">
-              <h3>Benefits for institutions</h3>
-              <ul>
-                <li>One channel for student support requests and psychologist follow-up.</li>
-                <li>More consistent communication records.</li>
-                <li>Stronger trust and visibility for school wellbeing services.</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h3>Simple onboarding</h3>
-              <ol>
-                <li>Set school details and user roles.</li>
-                <li>Share account setup instructions.</li>
-                <li>Define support and escalation workflow.</li>
-                <li>Launch with communication guidelines for students and staff.</li>
-              </ol>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq" class="section soft-bg">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">FAQ</p>
-            <h2>Common questions from students, families, and schools.</h2>
-          </div>
-          <div class="faq-list" role="list">
-            <article class="faq-item">
-              <button class="faq-question" aria-expanded="false">1) Who can use mindcare?</button>
-              <div class="faq-answer"><p>mindcare is for students and school psychologists within participating schools.</p></div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" aria-expanded="false">2) Is chat private?</button>
-              <div class="faq-answer"><p>Chats are designed to be private within authorized school roles and service safeguards.</p></div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" aria-expanded="false">3) Can students request appointments?</button>
-              <div class="faq-answer"><p>Yes. Students can send requests and psychologists can respond with next steps.</p></div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" aria-expanded="false">4) What wellbeing tools are included?</button>
-              <div class="faq-answer"><p>The app includes mood tracking, breathing exercises, body scan meditation, word games, and care tasks.</p></div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" aria-expanded="false">5) How do we request account deletion?</button>
-              <div class="faq-answer"><p>Use {{ACCOUNT_DELETION_CONTACT}} or contact support and your school administrator.</p></div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" aria-expanded="false">6) Is this an emergency service?</button>
-              <div class="faq-answer"><p>No. mindcare is not for emergencies. Follow school emergency policy or local emergency services.</p></div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">Contact</p>
-            <h2>Questions? We are here to help.</h2>
-          </div>
-          <div class="card-grid two">
-            <article class="card">
-              <h3>Send a message</h3>
-              <form id="contactForm" novalidate>
-                <label for="fullName">Full name</label>
-                <input id="fullName" name="fullName" type="text" required aria-required="true" />
-
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required aria-required="true" />
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="This form is front-end only. Connect your backend or form provider before production."></textarea>
-
-                <button type="submit" class="btn btn-primary">Send</button>
-                <p id="formFeedback" class="form-feedback" aria-live="polite"></p>
-              </form>
-            </article>
-            <article class="card">
-              <h3>Support details</h3>
-              <p><strong>Support email:</strong> <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a></p>
-              <p><strong>Privacy email:</strong> <a href="mailto:{{PRIVACY_EMAIL}}">{{PRIVACY_EMAIL}}</a></p>
-              <p><strong>Play Store URL:</strong> <a href="{{PLAY_STORE_URL}}">{{PLAY_STORE_URL}}</a></p>
-              <p><strong>Privacy Policy URL:</strong> <a href="{{PRIVACY_URL}}">{{PRIVACY_URL}}</a></p>
-              <p><strong>Terms URL:</strong> <a href="{{TERMS_URL}}">{{TERMS_URL}}</a></p>
-            </article>
+          <div class="checklist" aria-label="Security summary">
+            <p>✔ Messages are stored in encrypted form</p>
+            <p>✔ Distinct encryption password from account password</p>
+            <p>✔ Access controlled by role and school context</p>
           </div>
         </div>
       </section>
@@ -338,16 +128,18 @@
 
     <footer class="site-footer">
       <div class="container footer-grid">
-        <p>© <span id="year"></span> {{DEVELOPER_OR_SCHOOL_NAME}}. All rights reserved.</p>
-        <p>mindcare app version: {{APP_VERSION}}</p>
-        <p>
-          <a href="mailto:{{SUPPORT_EMAIL}}">Support</a>
-          <a href="privacy-policy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-        </p>
+        <div>
+          <p class="footer-title">MindCare</p>
+          <p>Supporting healthier school communities with privacy-focused student care tools.</p>
+        </div>
+        <nav aria-label="Footer links">
+          <a href="features.html">Features</a>
+          <a href="about.html">About</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
     </footer>
-
     <script src="script.js" defer></script>
   </body>
 </html>
