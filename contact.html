@@ -8,26 +8,29 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root { --bg:#0a0f1e; --mint:#4ecca3; --lilac:#a78bfa; --text:#f0f4ff; --muted:#c8d6e5; --glass:rgba(255,255,255,.05); --line:rgba(255,255,255,.1); --shadow:0 8px 32px rgba(0,0,0,.3);} *{box-sizing:border-box} html{scroll-behavior:smooth}
+      body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--text);font-size:1.05rem;line-height:1.75;background:radial-gradient(circle at 20% 10%, rgba(78,204,163,.22), transparent 40%),radial-gradient(circle at 80% 0%, rgba(167,139,250,.22), transparent 45%),radial-gradient(circle at 50% 100%, rgba(78,204,163,.2), transparent 45%),var(--bg);background-size:140% 140%;animation:mesh 12s ease-in-out infinite alternate;min-height:100vh}@keyframes mesh{0%{background-position:0% 0%,100% 0%,50% 100%}100%{background-position:30% 20%,70% 10%,45% 80%}}
+      .container{width:min(1160px,92%);margin:0 auto}.section{padding:4.5rem 0}.skip-link{position:absolute;left:-9999px;top:0}.skip-link:focus{left:1rem;top:1rem;background:#fff;color:#111;padding:.5rem;z-index:999}
+      h1,h2{font-family:Sora,Inter,sans-serif;line-height:1.2}h1{font-size:clamp(2.8rem,6vw,5rem);font-weight:800;margin:.35rem 0 1rem;background:linear-gradient(120deg,var(--mint),var(--lilac));-webkit-background-clip:text;background-clip:text;color:transparent}h2{font-size:clamp(1.6rem,3vw,2.5rem);font-weight:700;margin:0 0 .8rem}.lead{color:var(--muted)}
+      .eyebrow{text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;color:#b6f2df;font-weight:700}.section-head{margin-bottom:1.3rem}
+      .site-header{position:sticky;top:0;z-index:100;background:rgba(10,15,30,.7);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.08)}.nav-wrap{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+      .brand{display:inline-flex;align-items:center;gap:.6rem;color:var(--text);font-weight:800;text-decoration:none}.brand-logo{width:36px;height:36px}
+      .nav-toggle{background:transparent;border:1px solid rgba(255,255,255,.3);padding:.45rem;border-radius:10px}.nav-toggle span{display:block;width:24px;height:2px;background:var(--text);margin:5px 0}
+      .nav{display:flex;gap:.35rem}.nav a{color:var(--text);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;padding:.5rem .85rem;border-radius:999px;transition:.25s}.nav a:hover{color:var(--mint)}.nav a[aria-current='page']{background:linear-gradient(120deg,rgba(78,204,163,.28),rgba(167,139,250,.28));box-shadow:0 0 20px rgba(78,204,163,.35), inset 0 0 0 1px rgba(78,204,163,.45)}
+      #main-content{animation:fadeMain .4s ease both}@keyframes fadeMain{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+      .split{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.feature-card,.site-footer .cta-card{background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(16px);border-radius:20px;box-shadow:var(--shadow);padding:1.5rem}
+      form{display:grid;gap:.7rem}label{font-weight:600}input,textarea{width:100%;font:inherit;color:var(--text);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:.75rem .85rem;background:rgba(255,255,255,.04)}input:focus,textarea:focus{outline:2px solid rgba(78,204,163,.6);outline-offset:1px}
+      .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:50px;padding:.85rem 2rem;font-weight:700;border:1px solid transparent;transition:.25s}.btn-primary{background:var(--mint);color:#0b1221;box-shadow:0 0 20px rgba(78,204,163,.4)}.form-feedback{min-height:1.2rem;font-weight:600;margin:0}.form-feedback.success{color:#87ffd9}.form-feedback.error{color:#ffb3b3}
+      .site-footer{position:relative;margin-top:2rem;padding:2.2rem 0;background:#060a14;border-top:1px solid rgba(255,255,255,.06)}.site-footer::before{content:'';position:absolute;inset:0 0 auto 0;height:40px;background:linear-gradient(180deg,rgba(167,139,250,.12),transparent)}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr .9fr;gap:1rem}.footer-title{margin:0;font-family:Sora,Inter,sans-serif;font-size:1.25rem}.site-footer nav{display:grid;gap:.35rem}.site-footer a{color:#d6e2fb;text-decoration:none}.cta-card{padding:1rem}.cta-card .btn{padding:.65rem 1rem;border:1px solid var(--mint);color:var(--mint);background:transparent}
+      .back-to-top{position:fixed;right:1rem;bottom:1rem;width:48px;height:48px;border:0;border-radius:50%;background:var(--mint);color:#081020;display:grid;place-items:center;font-size:1.3rem;cursor:pointer;opacity:0;transform:translateY(15px);transition:.25s;pointer-events:none;z-index:120}.back-to-top.show{opacity:1;transform:none;pointer-events:auto}
+      @media (max-width:900px){.split,.footer-grid{grid-template-columns:1fr}.nav{position:absolute;left:4%;right:4%;top:82px;display:flex;flex-direction:column;background:rgba(10,15,30,.95);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:.7rem;max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:max-height .35s ease,opacity .25s ease}.nav.is-open{max-height:340px;opacity:1;pointer-events:auto}.nav-toggle{display:block}}@media (min-width:901px){.nav-toggle{display:none}}
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a href="index.html" class="brand" aria-label="MindCare Home"><img src="assets/mindcare-logo.svg" class="brand-logo" alt="" aria-hidden="true" /><span>MindCare</span></a>
-        <button class="nav-toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
-        <nav id="primaryNav" class="nav" aria-label="Primary">
-          <a href="index.html">Home</a>
-          <a href="features.html">Features</a>
-          <a href="about.html">About</a>
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="contact.html" aria-current="page">Contact</a>
-        </nav>
-      </div>
-    </header>
+    <header class="site-header"><div class="container nav-wrap"><a href="index.html" class="brand" aria-label="MindCare Home"><img src="assets/mindcare-logo.svg" class="brand-logo" alt="" aria-hidden="true" /><span>MindCare</span></a><button class="nav-toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle menu"><span></span><span></span><span></span></button><nav id="primaryNav" class="nav" aria-label="Primary"><a href="index.html">Home</a><a href="features.html">Features</a><a href="about.html">About</a><a href="privacy-policy.html">Privacy Policy</a><a href="contact.html" aria-current="page">Contact</a></nav></div></header>
 
     <main id="main-content" class="section">
       <div class="container split">
@@ -47,16 +50,12 @@
           <form id="contactForm" novalidate>
             <label for="fullName">Full name</label>
             <input id="fullName" name="fullName" type="text" autocomplete="name" required />
-
             <label for="email">Work email</label>
             <input id="email" name="email" type="email" autocomplete="email" required />
-
             <label for="schoolName">School name</label>
             <input id="schoolName" name="schoolName" type="text" required />
-
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
-
             <button class="btn btn-primary" type="submit">Submit</button>
             <p id="formFeedback" class="form-feedback" aria-live="polite"></p>
           </form>
@@ -64,17 +63,12 @@
       </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <p class="footer-title">MindCare</p>
-        <nav aria-label="Footer links">
-          <a href="index.html">Home</a>
-          <a href="features.html">Features</a>
-          <a href="about.html">About</a>
-          <a href="privacy-policy.html">Privacy Policy</a>
-        </nav>
-      </div>
-    </footer>
-    <script src="script.js" defer></script>
+    <footer class="site-footer"><div class="container footer-grid"><div><p class="footer-title">MindCare</p></div><nav aria-label="Footer links"><a href="index.html">Home</a><a href="features.html">Features</a><a href="about.html">About</a><a href="privacy-policy.html">Privacy Policy</a></nav><div class="cta-card"><p><strong>Contact us</strong></p><a class="btn" href="contact.html">Get in touch</a></div></div></footer>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    <script>
+      const navToggle=document.getElementById('navToggle');const nav=document.getElementById('primaryNav');if(navToggle&&nav){navToggle.addEventListener('click',()=>{const ex=navToggle.getAttribute('aria-expanded')==='true';navToggle.setAttribute('aria-expanded',String(!ex));nav.classList.toggle('is-open');});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false');}));}
+      const btt=document.getElementById('backToTop');if(btt){const onScroll=()=>btt.classList.toggle('show',window.scrollY>400);window.addEventListener('scroll',onScroll,{passive:true});onScroll();btt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));}
+      const contactForm=document.getElementById('contactForm');const feedback=document.getElementById('formFeedback');if(contactForm&&feedback){contactForm.addEventListener('submit',(event)=>{event.preventDefault();feedback.className='form-feedback';const fullName=document.getElementById('fullName').value.trim();const email=document.getElementById('email').value.trim();const schoolName=document.getElementById('schoolName').value.trim();const message=document.getElementById('message').value.trim();const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;if(!fullName||!email||!schoolName||!message){feedback.textContent='Please complete all fields before submitting.';feedback.classList.add('error');return;}if(!emailRegex.test(email)){feedback.textContent='Please enter a valid email address.';feedback.classList.add('error');return;}feedback.textContent='Thanks! Your request was captured in this demo form. Connect your backend to enable delivery.';feedback.classList.add('success');contactForm.reset();});}
+    </script>
   </body>
 </html>
