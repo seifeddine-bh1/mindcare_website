@@ -42,7 +42,7 @@ if (contactForm && feedback) {
       return;
     }
 
-    feedback.textContent = 'Thanks! Your request was captured in this demo form. Connect your backend to enable delivery.';
+    feedback.textContent = 'Thanks! Your request is ready. If this site is not yet connected to a support inbox, please share the same details through your school MindCare contact.';
     feedback.classList.add('success');
     contactForm.reset();
   });
@@ -65,4 +65,15 @@ if ('IntersectionObserver' in window && revealElements.length > 0) {
   revealElements.forEach((element) => observer.observe(element));
 } else {
   revealElements.forEach((element) => element.classList.add('is-visible'));
+}
+
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+  const handleBackToTopVisibility = () => {
+    backToTop.classList.toggle('show', window.scrollY > 420);
+  };
+
+  window.addEventListener('scroll', handleBackToTopVisibility, { passive: true });
+  handleBackToTopVisibility();
+  backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
