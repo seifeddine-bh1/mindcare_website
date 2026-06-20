@@ -94,7 +94,7 @@ ul, ol { padding-left: 1.25rem; }
 .trust-item { display: flex; align-items: center; gap: .55rem; color: var(--muted); font-weight: 700; }
 .trust-item svg { flex: 0 0 18px; width: 18px; height: 18px; fill: var(--gold-strong); }
 
-.glass-card, .feature-card, .legal-card, .toc, .rounded-section, .cta-card, .phone { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); backdrop-filter: blur(16px); }
+.glass-card, .feature-card, .legal-card, .toc, .rounded-section, .phone { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); backdrop-filter: blur(16px); }
 .hero-right { display: grid; gap: 1rem; }
 .phone { width: min(360px, 100%); justify-self: center; padding: .9rem; border-radius: 38px; background: linear-gradient(180deg, #fffef8, #fff2cb); }
 .phone-screen { min-height: 500px; display: grid; align-content: start; gap: .75rem; padding: 1rem; border-radius: 30px; background: linear-gradient(180deg, #fffaf0, #fff1c7); border: 1px solid rgba(211,162,41,.26); overflow: hidden; }
@@ -141,8 +141,8 @@ textarea { min-height: 150px; resize: vertical; }
 .site-footer p { color: #f8eac4; }
 .site-footer a { color: #ffe49a; }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: .8rem 1rem; }
-.site-footer .cta-card { background: rgba(255, 248, 231, .1); border-color: rgba(255, 224, 144, .25); box-shadow: none; padding: 1rem; }
 .site-footer .btn-secondary { color: #fff6d9; border-color: rgba(255, 224, 144, .55); background: transparent; }
+.footer-policy-link { justify-self: start; align-self: start; }
 .back-to-top { position: fixed; right: 1rem; bottom: 1rem; z-index: 99; width: 48px; height: 48px; border: 0; border-radius: 50%; background: var(--gold); color: var(--cocoa); box-shadow: var(--shadow); cursor: pointer; opacity: 0; transform: translateY(12px); pointer-events: none; transition: .2s ease; font-size: 1.25rem; }
 .back-to-top.show { opacity: 1; transform: none; pointer-events: auto; }
 
