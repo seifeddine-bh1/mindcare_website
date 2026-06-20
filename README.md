@@ -1,11 +1,11 @@
 # MindCare static website
 
-Production-ready static website for **MindCare** (Android package `com.anonymous.mindcare`) to support brand presence, trust communication, Google Play policy review, and Play Store validation.
+Static validation website for the **MindCare** mobile application (Android package `com.anonymous.mindcare`) to support Google Play policy review and Play Store validation.
 
 ## Project purpose
-- Public landing site for students, families, schools, and app reviewers.
+- Public landing site for the MindCare mobile app, students, schools, families, and Play Store reviewers.
 - Match the mobile app's warm yellow and soft cream visual theme.
-- Explain MindCare's student support features, intended audience, and limitations.
+- Explain MindCare's student mental-health support features, intended audience, and limitations.
 - Provide public Privacy Policy, Terms, contact, and account deletion guidance for Google Play.
 
 ## File structure
@@ -36,8 +36,8 @@ Production-ready static website for **MindCare** (Android package `com.anonymous
 ## Before publishing
 - Confirm the public domain and Play Console privacy URL.
 - Replace demo contact-form behavior with a real backend, email service, or support workflow.
-- Have the Privacy Policy and Terms reviewed by qualified legal counsel and participating school leadership.
+- Have the Privacy Policy and Terms reviewed by qualified legal counsel and participating school leadership before submitting or expanding the app.
 - Confirm school consent, retention, crisis escalation, and account deletion processes match the deployed app.
 
 ## Legal note
-Privacy and Terms content is drafted in plain language for product readiness, but must be reviewed and approved by qualified legal counsel and school leadership before production launch.
+Privacy and Terms content is drafted in plain language for app validation, but must be reviewed and approved by qualified legal counsel and school leadership before public app rollout.
