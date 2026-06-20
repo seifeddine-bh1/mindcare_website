@@ -166,3 +166,20 @@ textarea { min-height: 150px; resize: vertical; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+/* Production polish: stronger composition, richer cards, and responsive about-page storytelling. */
+.page-hero { position: relative; overflow: hidden; padding: clamp(4.5rem, 8vw, 7rem) 0 clamp(2.5rem, 5vw, 4rem); }
+.page-hero::after { content: ""; position: absolute; inset: auto -10% -18rem 36%; height: 28rem; background: radial-gradient(circle, rgba(246,189,43,.24), transparent 68%); pointer-events: none; }
+.page-hero-grid { display: grid; gap: 1.4rem; align-items: center; position: relative; z-index: 1; }
+.brand-showcase { padding: clamp(1.2rem, 3vw, 2rem); border: 1px solid var(--border); border-radius: var(--radius-lg); background: linear-gradient(145deg, rgba(255,253,246,.94), rgba(255,243,207,.76)); box-shadow: var(--shadow); }
+.brand-showcase img { width: min(320px, 82%); display: block; margin: 0 auto 1rem; filter: drop-shadow(0 22px 30px rgba(126,86,6,.16)); }
+.brand-showcase p { margin-bottom: 0; color: var(--muted); }
+.site-header { box-shadow: 0 10px 30px rgba(126,86,6,.06); }
+.hero::after { content: ""; position: absolute; right: -8rem; top: 4rem; width: 28rem; height: 28rem; border-radius: 50%; background: radial-gradient(circle, rgba(255,207,86,.3), transparent 65%); }
+.hero-panel { background: linear-gradient(145deg, rgba(255,253,246,.95), rgba(255,243,207,.75)); }
+.feature-card, .rounded-section, .legal-card, .toc { background: linear-gradient(145deg, rgba(255,253,246,.94), rgba(255,248,231,.82)); }
+.feature-card { position: relative; overflow: hidden; }
+.feature-card::after { content: ""; position: absolute; right: -2.8rem; top: -2.8rem; width: 7rem; height: 7rem; border-radius: 50%; background: rgba(255,207,86,.17); }
+.legal-card h3 { margin-top: 1rem; color: #6f4800; }
+@media (min-width: 760px) { .page-hero-grid { grid-template-columns: 1.05fr .95fr; gap: clamp(2rem, 5vw, 4rem); } }
+@media (min-width: 1060px) { .brand-logo { width: 48px; height: 48px; } .nav-wrap { min-height: 86px; } }
